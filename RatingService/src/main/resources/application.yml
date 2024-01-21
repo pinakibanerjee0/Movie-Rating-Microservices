@@ -1,0 +1,24 @@
+eureka:
+    client:
+        fetch-registry: true
+        register-with-eureka: true
+        serviceUrl:
+            defaultZone: http://localhost:8084/eureka
+    instance:
+        prefer-ip-address: true
+server:
+    port: 8083
+spring:
+    application:
+        name: RATING-SERVICE
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        password: Pinu@1997
+        url: jdbc:mysql://localhost:3306/ratingservice
+        username: root
+    jpa:
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                dilect: org.hibernate.dialect.MySQL8Dialect
